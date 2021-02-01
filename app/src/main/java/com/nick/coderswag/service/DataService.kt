@@ -5,7 +5,7 @@ import com.nick.coderswag.model.Product
 
 object DataService {
     val categories = listOf(
-            Category("SHIRTH","shirtimage"),
+            Category("SHIRTS","shirtimage"),
             Category("HOODIES","hoodieimage"),
             Category("HATS","hatimage"),
             Category("DIGITAL","digitalgoodsimage")
@@ -35,7 +35,7 @@ object DataService {
 
     val digitalGood = listOf<Product>()
 
-    fun getProduct(category:String) : List<Product> {
+    fun getProduct(category:String?) : List<Product> {
          return when(category) {
             "SHIRTS" -> shirts
             "HATS" -> hats
